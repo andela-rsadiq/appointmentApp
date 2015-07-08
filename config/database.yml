@@ -10,3 +10,7 @@ development: &default
 test:
   <<: *default
   database: appointmentApp_test
+
+production:
+  <<: *default
+  database: appointmentApp_production
