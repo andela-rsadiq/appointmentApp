@@ -1,4 +1,7 @@
 <%= form_for @scheduler do |f| %>
+    <%= f.label :staff_name %>
     <%= f.text_field :name %>
+    <%= f.label :designation_title %>
+    <%= f.text_field :role %>
     <%= f.submit %>
 <% end %>
