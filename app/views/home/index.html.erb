@@ -1,3 +1,20 @@
-<h1>Home#index</h1>
-<p>Trying to build with travis CI.</p>
-<p>Find me in app/views/home/index.html.erb</p>
+<header>
+  Appointments!
+</header>
+<div>
+  <h1>Welcome to Appointments</h1>
+  <div>
+    <ul>
+      <li>
+        <%= link_to 'Click here to schedule appointments', patients_path %>
+      </li>
+      <li>
+        <%= link_to 'Click here to view appointments', appointments_path(@appointments) %>
+      </li>
+      <li>
+        <%= link_to "Add new staff", new_scheduler_path %>
+      </li>
+    </ul>
+  </div>
+</div>
+

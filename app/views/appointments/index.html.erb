@@ -1,2 +1,9 @@
-<h1>Appointments#index</h1>
-<p>Find me in app/views/appointments/index.html.erb</p>
+<div class="appointment">
+  <div class="container">
+    <% @appointments.each do |appointment| %>
+        <p> <%= appointment.reason %> </p>
+        <p> <%= appointment.scheduler %> </p>
+        <p> <%= appointment.appointment_details %> </p>
+    <% end %>
+  </div>
+</div>

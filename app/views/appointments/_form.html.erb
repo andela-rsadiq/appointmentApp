@@ -1,0 +1,6 @@
+<%= simple_form_for [@patient, @appointment] do |f| %>
+    <%= f.text_field :reason %>
+    <%= f.date_field(:appointment_details) %>
+    <%= f.association :scheduler, collection: Scheduler.all %>
+    <%= f.submit %>
+<% end %>

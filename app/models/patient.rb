@@ -1,4 +1,4 @@
 class Patient < ActiveRecord::Base
   has_many :appointments
-  has_many :schedules, through: :appointment
+  validates_presence_of :name, uniqueness: true
 end
