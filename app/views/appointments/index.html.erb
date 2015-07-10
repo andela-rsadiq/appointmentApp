@@ -2,7 +2,7 @@
   <div class="container">
     <% @appointments.each do |appointment| %>
         <p> <%= appointment.reason %> </p>
-        <p> <%= appointment.scheduler %> </p>
+        <p> <%= appointment.check_scheduler %> </p>
         <p> <%= appointment.appointment_details %> </p>
     <% end %>
   </div>
