@@ -5,6 +5,7 @@
         <p> <%= appointment.reason %> </p>
         <p> <%= appointment.check_scheduler %> </p>
         <p> <%= appointment.appointment_date %> <%= appointment.appointment_time.try(:strftime, "%I.%M %P") %> </p>
+
     <% end %>
   </div>
 </div>
