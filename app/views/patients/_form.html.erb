@@ -1,4 +1,9 @@
 <%= form_for @patient do |f| %>
+    <%= f.label :name %>
     <%= f.text_field :name %>
+    <%= f.label :sex %>
+    <%= f.text_field :sex %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
     <%= f.submit %>
 <% end %>

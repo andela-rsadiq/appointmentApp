@@ -22,6 +22,6 @@ class SchedulersController < ApplicationController
 
   private
     def scheduler_params
-      params.require(:scheduler).permit(:name)
+      params.require(:scheduler).permit(:name, :role)
     end
 end
