@@ -1,2 +1,9 @@
-<h1>Schedulers#index</h1>
-<p>Find me in app/views/schedulers/index.html.erb</p>
+<div class="appointment">
+  <div class="container">
+    <% @schedulers.each do |s| %>
+        <!--<p> <%= link_to s.name, scheduler_path(s) %> </p>-->
+        <p> <%= s.name %> </p>
+    <% end %>
+    <%= link_to 'Add new staff', new_scheduler_path %>
+  </div>
+</div>
