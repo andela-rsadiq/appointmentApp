@@ -1,8 +1,10 @@
 <%= simple_form_for [@patient, @appointment] do |f| %>
     <%= f.label :reason_for_appointment %>
     <%= f.text_field :reason %>
+    <%= f.label :appointment_date %>
+    <%= f.date_field(:appointment_date) %>
     <%= f.label :appointment_time %>
-    <%= f.date_field(:appointment_details) %>
+    <%= f.time_field(:appointment_time) %>
     <%= f.association :scheduler, collection: Scheduler.all %>
     <%= f.submit %>
 <% end %>

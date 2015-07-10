@@ -1,7 +1,8 @@
 <div class="appointment">
+  <h3>Patient Lists</h3>
   <div class="container">
     <% @patients.each do |patient| %>
-        <p> <%= link_to patient.name, patient_path(patient) %> </p>
+        <p> <%= patient.name %> <%= link_to 'create appointment', patient_path(patient) %> </p>
     <% end %>
     <%= link_to 'Add new patient', new_patient_path %>
   </div>

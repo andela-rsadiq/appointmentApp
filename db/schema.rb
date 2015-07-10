@@ -18,11 +18,12 @@ ActiveRecord::Schema.define(version: 20150709114118) do
 
   create_table "appointments", force: :cascade do |t|
     t.text     "reason"
-    t.datetime "appointment_details"
+    t.date     "appointment_date"
+    t.time     "appointment_time"
     t.integer  "patient_id"
     t.integer  "scheduler_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
