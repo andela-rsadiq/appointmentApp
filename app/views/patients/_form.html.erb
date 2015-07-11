@@ -1,4 +1,11 @@
 <%= form_for @patient do |f| %>
+    <% if @patient.errors.any? %>
+        <ul>
+        <% @patient.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+        <% end %>
+        </ul>
+    <%  end %>
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.label :sex %>

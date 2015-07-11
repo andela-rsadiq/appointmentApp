@@ -8,7 +8,7 @@ class SchedulersController < ApplicationController
   end
 
   def show
-
+    @scheduler = Scheduler.find(params[:id])
   end
 
   def create

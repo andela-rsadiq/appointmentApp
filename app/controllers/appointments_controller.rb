@@ -16,7 +16,8 @@ class AppointmentsController < ApplicationController
 
   def create
     if @appointment.save
-      redirect_to patient_appointments_path
+      redirect_to patient_path(params[:patient_idq])
+
     elsif
       render 'new'
     end

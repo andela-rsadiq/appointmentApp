@@ -1,9 +1,8 @@
 <div class="appointment">
   <div class="container">
     <% @schedulers.each do |s| %>
-        <!--<p> <%= link_to s.name, scheduler_path(s) %> </p>-->
-        <p> <%= s.name %> </p>
+        <p> Staff Name: <%= s.name %> </p>
+        <p> Title: <%= s.role %> </p>
     <% end %>
-    <%= link_to 'Add new staff', new_scheduler_path %>
   </div>
 </div>

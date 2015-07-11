@@ -1,11 +1,12 @@
 <div class="appointment">
-  <h3>Appointment List</h3>
+  <h3>Appointments List</h3>
   <div class="container">
     <% @appointments.each do |appointment| %>
         <p> <%= appointment.reason %> </p>
         <p> <%= appointment.check_scheduler %> </p>
         <p> <%= appointment.appointment_date %> <%= appointment.appointment_time.try(:strftime, "%I.%M %P") %> </p>
-
+        <br>
+        <br>
     <% end %>
   </div>
 </div>

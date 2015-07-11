@@ -1,6 +1,11 @@
 class PatientsController < ApplicationController
+  before_action :set_patient, :only  => [:show, :destroy]
   def index
-    @patients = Patient.all
+    if params[:search]
+      @patients = Patient.search(params[:search])
+    else
+      @patients = Patient.all
+    end
   end
 
   def new
@@ -8,7 +13,8 @@ class PatientsController < ApplicationController
   end
 
   def create
-    @patient = Patient.create(patient_params)
+    @patient = Patient.new(patient_params)
+    # require 'pry'; binding.pry
     if @patient.save
       redirect_to new_patient_appointment_path(@patient)
     else
@@ -17,11 +23,21 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @patient = Patient.find(params[:id])
+
   end
+
+  def destroy
+    @patient.destroy
+    redirect_to root_url, notice: "Patient has been deleted."
+  end
+
 
   private
     def patient_params
       params.require(:patient).permit(:name, :sex, :email)
     end
+
+  def set_patient
+    @patient = Patient.find(params[:id])
+  end
 end

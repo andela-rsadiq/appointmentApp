@@ -1,9 +1,19 @@
+<%= form_tag patients_path, :method => "get" do %>
+   <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "search", :name => nil %>
+<% end %>
+
 <div class="appointment">
   <h3>Patient Lists</h3>
   <div class="container">
     <% @patients.each do |patient| %>
-        <p> <%= patient.name %> <%= link_to 'create appointment', patient_path(patient) %> </p>
+        <p>
+          <%= patient.name %>
+          <%= link_to 'create appointment', new_patient_appointment_path(patient.id) %>
+          <%= link_to 'view appointments',  patient_path(patient.id) %>
+        </p>
     <% end %>
     <%= link_to 'Add new patient', new_patient_path %>
+    <%= link_to 'Back to home page', root_path %>
   </div>
 </div>
