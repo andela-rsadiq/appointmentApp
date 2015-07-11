@@ -2,6 +2,7 @@ class AppointmentsController < ApplicationController
   before_action :load_patient, except: [:index]
   before_action :build_appointment_params,  only: [ :new]
   before_action :build_appointment_from_params, only: [:create]
+  before_action :load_appointment, only: [:show, :edit, :destroy]
 
   def home
   end
@@ -16,11 +17,21 @@ class AppointmentsController < ApplicationController
 
   def create
     if @appointment.save
-      redirect_to patient_path(params[:patient_idq])
+      redirect_to patient_path(@patient)
 
-    elsif
+    else
       render 'new'
     end
+  end
+
+  def edit
+  end
+
+  def destroy
+     if @appointment.destroy
+       flash[:notice] = 'Appointment has been deleted!'
+       redirect_to patient_path(@patient)
+     end
   end
 
   def load_patient
@@ -33,6 +44,10 @@ class AppointmentsController < ApplicationController
 
   def build_appointment_from_params
     @appointment = @patient.appointments.build(appointment_params)
+  end
+
+  def load_appointment
+    @appointment =  @patient.appointments.find(params[:id])
   end
 
   private
