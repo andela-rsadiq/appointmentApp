@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="ROBOTS" content="NOODP" />
-  <meta name="viewport" content="initial-scale=1" />
-  <%#
-    Configure default and controller-, and view-specific titles in
-    config/locales/en.yml. For more see:
-    https://github.com/calebthompson/title#usage
-  %>
-  <title><%= title %></title>
-  <%= stylesheet_link_tag :application, media: "all" %>
+  <title>FacilityMgmt</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= body_class %>">
-  <%= render "flashes" -%>
-  <%= yield %>
-  <%= render "javascript" %>
+<body>
+<nav>
+  <div class="nav-wrapper">
+    <h3>Appointments!</h3>
+  </div>
+</nav>
+<%= yield %>
 </body>
 </html>
-
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-  <!--<title>FacilityMgmt</title>-->
-  <!--<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>-->
-  <!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
-  <!--<%= csrf_meta_tags %>-->
-<!--</head>-->
-<!--<body class= "body_class">-->
-<!--<%= yield %>-->
-<!--</body>-->
-<!--</html>-->
 

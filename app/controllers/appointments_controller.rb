@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
   before_action :load_patient, except: [:index]
   before_action :build_appointment_params,  only: [ :new]
   before_action :build_appointment_from_params, only: [:create]
-  before_action :load_appointment, only: [:show, :edit, :destroy]
+  before_action :load_appointment, only: [:show, :edit, :destroy, :update]
 
   def home
   end
@@ -25,6 +25,14 @@ class AppointmentsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @appointment.update(appointment_params)
+      redirect_to patient_path(@patient)
+    else
+      render 'edit'
+    end
   end
 
   def destroy

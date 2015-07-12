@@ -3,7 +3,8 @@
     <p>Doctor's Name: <%= p.check_scheduler %></p>
     <p>Reason: <%= p.reason %></p>
     <p>Appointment Details: <%= p.appointment_date %> <%= p.appointment_time.try(:strftime, "%I.%M %P") %></p>
-    <%= link_to "Delete Appoinment", patient_appointment_path(p.patient, p), method: :delete, data: { confirm: "Are you sure?"} %>
+    <%= link_to "Delete Appointment", patient_appointment_path(p.patient, p), method: :delete, data: { confirm: "Are you sure?"} %>
+    <%= link_to "Edit Appointment", edit_patient_appointment_path(p.patient, p) %>
     <br>
     <br>
 <% end %>

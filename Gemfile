@@ -25,7 +25,7 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'materialize-sass'
 
 group :development do
   gem "spring"
