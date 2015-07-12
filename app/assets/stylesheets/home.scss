@@ -3,15 +3,23 @@ html, body, p {
 }
 
 body {
-  background-color: #eee;
+//  background-color: #eee;
   font-family: 'Roboto', sans-serif;
-}
-.header {
-  background-color: #40f216;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
-  height: 80px;
-  text-align: center;
 }
 .container {
   text-align: center;
+}
+header nav {
+  background-color: #006EBD;
+}
+header h3 {
+  line-height: 64px;
+  margin: 0 20px 0;
+}
+body > img {
+  height: 35vh;
+  width: 100vw;
+}
+patient {
+
 }

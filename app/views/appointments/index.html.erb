@@ -1,6 +1,6 @@
-<div class="appointment">
+<div class="container">
   <h3>Appointments List</h3>
-  <div class="container">
+  <div class="appointment">
     <% @appointments.each do |appointment| %>
         <p> Patient name: <%= appointment.patient.name %> </p>
         <p> Reason for Appointment: <%= appointment.reason %> </p>
@@ -9,5 +9,6 @@
         <br>
         <br>
     <% end %>
+    <%= link_to 'Back to home page', root_url %>
   </div>
 </div>

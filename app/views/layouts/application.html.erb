@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Appointment</title>
+  <title>Appointments!</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <div class="nav-wrapper">
-    <h3>Appointments!</h3>
-  </div>
-</nav>
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <h3>Appointments!</h3>
+    </div>
+  </nav>
+</header>
 <%= yield %>
 </body>
 </html>
+
+
 
