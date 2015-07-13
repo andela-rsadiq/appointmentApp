@@ -31,10 +31,13 @@ body > img {
     padding-top: 15px;
   }
 }
+.home-page-container {
+  text-align: center;
+}
 .schedule-form {
   height: 70vh;
 }
-.card-container, .form {
+.card-container, .form, .container {
   background-color: #a9d8f0;
 }
 .link-container, .home-container {
