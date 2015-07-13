@@ -1,10 +1,12 @@
-<div class="appointment">
-  <div class="container">
-    <% @schedulers.each do |s| %>
-        <p> Staff Name: <%= s.name %> </p>
-        <p> Title: <%= s.role %> </p>
-        <br>
-    <% end %>
+<div class="container">
+  <h3>Staff List</h3>
+  <% @schedulers.each do |s| %>
+    <div class="card card-container">
+      <p> Staff Name: <%= s.name %> </p>
+      <p> Title: <%= s.role %> </p>
+    </div>
+  <% end %>
+  <div class="home-container waves-effect waves-light btn-large">
     <%= link_to 'Back to Home', root_url %>
   </div>
 </div>

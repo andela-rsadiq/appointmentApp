@@ -1,30 +1,32 @@
 <div class="container form">
   <h3>Add Patient</h3>
   <%= form_for @patient do |f| %>
-      <div>
+
         <% if @patient.errors.any? %>
+          <div class="error-validation">
             <ul>
               <% @patient.errors.full_messages.each do |error| %>
                   <li><%= error %></li>
               <% end %>
             </ul>
+          </div>
         <%  end %>
         <div class="input-field">
-          <%= f.text_field :name %>
           <%= f.label :name %>
+          <%= f.text_field :name %>
         </div>
         <div class="input-field">
-          <%= f.text_field :sex %>
           <%= f.label :sex %>
+          <%= f.text_field :sex %>
         </div>
         <div class="input-field">
-          <%= f.text_field :email %>
           <%= f.label :email %>
+          <%= f.text_field :email %>
         </div>
         <div class="home-container waves-effect waves-light btn-large">
           <%= f.submit %>
         </div>
-      </div>
+
 
   <% end %>
 </div>

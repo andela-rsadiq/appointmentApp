@@ -11,28 +11,39 @@ body {
 header nav {
   background-color: #006EBD;
 }
-header h3 {
+.nav-text {
+  font-family: 'Lobster', cursive;
+  font-size: 200%;
+  padding-left: 20px;
+}
+header h3, .home-page-text > h3 {
   line-height: 64px;
   margin: 0 20px 0;
 }
-body > img {
-  height: 35vh;
-  width: 100vw;
+.home-page-text > h3 {
+  position: relative;
+  top: 200px;
+}
+.head-section{
+  background: url('http://i.imgur.com/sz3s6mF.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  color: #ffffff;
 }
 .container {
-  height: 60vh;
+  height: auto;
   width: 50vw;
   border-radius: 10px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+  margin: 20px auto 0px auto;
   h3, h5 {
     text-align: center;
     padding-top: 15px;
   }
 }
 .home-page-container {
-  text-align: center;
+  margin: 200px auto 0 auto;
 }
 .schedule-form {
   height: 70vh;
@@ -47,7 +58,7 @@ body > img {
   background-color: #006EBD;
 }
 .home-container {
-  float: right;
+  margin: auto;
 }
 select {
   display: block;
@@ -69,6 +80,17 @@ select {
 .schedule-form .home-container {
   margin-top: 10px;
 }
-.home-container:hover, .home-container:focus, .home-container:active {
+.home-container:hover, .home-container:focus, .home-container:active, .link-container:hover, .link-container:focus, .link-container:active {
   background-color: #006EBD;
+}
+
+.error-validation{
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ffffff;
+  padding: 10px;
+  ul{
+    color: red;
+  }
 }
