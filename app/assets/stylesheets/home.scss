@@ -69,3 +69,6 @@ select {
 .schedule-form .home-container {
   margin-top: 10px;
 }
+.home-container:hover, .home-container:focus, .home-container:active {
+  background-color: #006EBD;
+}
