@@ -3,18 +3,16 @@
     <h3>Welcome to Appointments!</h3>
     <div class="home-page-container">
       <ul>
-        <li class="home-container waves-effect waves-light btn-large">
-          <%= link_to 'Click here to schedule appointments', patients_path %>
+        <li>
+          <%= link_to 'schedule appointments', patients_path, class:'home-container waves-effect waves-light btn-large' %>
         </li>
         <br>
-        <br>
-        <li class="home-container waves-effect waves-light btn-large">
-          <%= link_to 'Click here to view appointments', appointments_path(@appointments) %>
+        <li>
+          <%= link_to 'view appointments', appointments_path(@appointments), class:'home-container waves-effect waves-light btn-large' %>
         </li>
         <br>
-        <br>
-        <li class="home-container waves-effect waves-light btn-large">
-          <%= link_to "Add new staff", new_scheduler_path %>
+        <li>
+          <%= link_to "Add new staff", new_scheduler_path, class:'home-container waves-effect waves-light btn-large' %>
         </li>
       </ul>
     </div>

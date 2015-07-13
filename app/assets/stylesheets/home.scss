@@ -22,7 +22,7 @@ header h3, .home-page-text > h3 {
 }
 .home-page-text > h3 {
   position: relative;
-  top: 200px;
+  top: 150px;
 }
 .head-section{
   background: url('http://i.imgur.com/sz3s6mF.jpg') no-repeat center;
@@ -44,12 +44,12 @@ header h3, .home-page-text > h3 {
 }
 .home-page-container {
   margin: 200px auto 0 auto;
+  li {
+    color: #ffffff;
+  }
 }
 .schedule-form {
   height: 70vh;
-}
-.staff-form {
-  height: 40vh;
 }
 .card-container, .form {
   background-color: #a9d8f0;
