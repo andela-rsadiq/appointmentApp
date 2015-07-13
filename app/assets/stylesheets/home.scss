@@ -37,7 +37,10 @@ body > img {
 .schedule-form {
   height: 70vh;
 }
-.card-container, .form, .container {
+.staff-form {
+  height: 40vh;
+}
+.card-container, .form {
   background-color: #a9d8f0;
 }
 .link-container, .home-container {
@@ -51,6 +54,7 @@ select {
 }
 .home-container > input {
   background-color: #006EBD;
+  color: #000000;
   border: 0;
 }
 /* label focus color */

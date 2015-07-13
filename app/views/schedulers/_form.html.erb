@@ -1,7 +1,17 @@
-<%= form_for @scheduler do |f| %>
-    <%= f.label :staff_name %>
-    <%= f.text_field :name %>
-    <%= f.label :designation_title %>
-    <%= f.text_field :role %>
-    <%= f.submit %>
-<% end %>
+<div class="form staff-form container">
+  <h3>New Staff Form</h3>
+  <%= form_for @scheduler do |f| %>
+      <div class="input-field">
+        <%= f.label :staff_name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="input-field">
+        <%= f.label :designation_title %>
+        <%= f.text_field :role %>
+      </div>
+      <div class="home-container waves-effect waves-light btn-large">
+        <%= f.submit %>
+      </div>
+
+  <% end %>
+</div>
