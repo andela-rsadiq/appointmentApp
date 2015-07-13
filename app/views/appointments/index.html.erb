@@ -1,14 +1,18 @@
-<div class="container">
+<div class="patients">
   <h3>Appointments List</h3>
   <div class="appointment">
     <% @appointments.each do |appointment| %>
-        <p> Patient name: <%= appointment.patient.name %> </p>
-        <p> Reason for Appointment: <%= appointment.reason %> </p>
-        <p> Staff to See: <%= appointment.check_scheduler %> </p>
-        <p> Appointment Details: <%= appointment.appointment_date %> <%= appointment.appointment_time.try(:strftime, "%I.%M %P") %> </p>
-        <br>
-        <br>
+        <div class="card card-container">
+          <div class="card-content">
+            <p> Patient name: <%= appointment.patient.name %> </p>
+            <p> Reason for Appointment: <%= appointment.reason %> </p>
+            <p> Staff to See: <%= appointment.check_scheduler %> </p>
+            <p> Appointment Details: <%= appointment.appointment_date %> <%= appointment.appointment_time.try(:strftime, "%I.%M %P") %> </p>
+          </div>
+        </div>
     <% end %>
-    <%= link_to 'Back to home page', root_url %>
+    <div class="home-container waves-effect waves-light btn-large">
+      <%= link_to 'Back to home page', root_url %>
+    </div>
   </div>
 </div>

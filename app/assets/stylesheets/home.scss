@@ -5,9 +5,9 @@ html, body, p {
 body {
   font-family: 'Roboto', sans-serif;
 }
-.container {
-  text-align: center;
-}
+//.container {
+//  text-align: center;
+//}
 header nav {
   background-color: #006EBD;
 }
@@ -19,25 +19,46 @@ body > img {
   height: 35vh;
   width: 100vw;
 }
-.patients {
-  height: 80vh;
+.container {
+  height: 60vh;
   width: 50vw;
   border-radius: 10px;
-  margin: 0 auto;
-  h3 {
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  h3, h5 {
     text-align: center;
     padding-top: 15px;
   }
 }
-.card-container {
+.schedule-form {
+  height: 70vh;
+}
+.card-container, .form {
   background-color: #a9d8f0;
 }
 .link-container, .home-container {
   background-color: #006EBD;
 }
 .home-container {
-
+  float: right;
 }
 select {
-display: block;
+  display: block;
+}
+.home-container > input {
+  background-color: #006EBD;
+  border: 0;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #006EBD;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #006EBD;
+  box-shadow: 0 1px 0 0 #006EBD;
+}
+.schedule-form .home-container {
+  margin-top: 10px;
 }

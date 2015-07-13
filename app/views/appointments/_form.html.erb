@@ -1,10 +1,21 @@
-<%= simple_form_for [@patient, @appointment] do |f| %>
-    <%= f.label :reason_for_appointment %>
-    <%= f.text_field :reason %>
-    <%= f.label :appointment_date %>
-    <%= f.date_field(:appointment_date) %>
-    <%= f.label :appointment_time %>
-    <%= f.time_field(:appointment_time) %>
-    <%= f.association :scheduler, collection: Scheduler.all %>
-    <%= f.submit %>
-<% end %>
+<div class="form container schedule-form">
+  <h5>Schedule Appointment for <%= @patient.name %></h5>
+  <%= simple_form_for [@patient, @appointment] do |f| %>
+      <div class="input-field">
+        <%= f.label :reason_for_appointment %>
+        <%= f.text_field :reason %>
+      </div>
+      <div class="input-field">
+        <!--<%= f.label :appointment_date %>-->
+        <p>Appointment Date</p><%= f.date_field(:appointment_date) %>
+      </div>
+      <div class="input-field">
+        <!--<%= f.label :appointment_time %>-->
+        <p>Appointment Date</p><%= f.time_field(:appointment_time) %>
+      </div>
+      <%= f.association :scheduler, collection: Scheduler.all %>
+      <div class="home-container waves-effect waves-light btn-large">
+        <%= f.submit %>
+      </div>
+  <% end %>
+</div>
