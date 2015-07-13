@@ -3,7 +3,6 @@ html, body, p {
 }
 
 body {
-//  background-color: #eee;
   font-family: 'Roboto', sans-serif;
 }
 .container {
@@ -20,6 +19,25 @@ body > img {
   height: 35vh;
   width: 100vw;
 }
-patient {
+.patients {
+  height: 80vh;
+  width: 50vw;
+  border-radius: 10px;
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+.card-container {
+  background-color: #a9d8f0;
+}
+.link-container, .home-container {
+  background-color: #006EBD;
+}
+.home-container {
 
+}
+select {
+display: block;
 }

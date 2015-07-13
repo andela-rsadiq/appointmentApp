@@ -1,14 +1,26 @@
 <div class="patients">
-  <h3>Patient Lists</h3>
-  <div class="container">
+  <h3>Patients List</h3>
     <% @patients.each do |patient| %>
+    <div class="card card-container">
+      <div class="card-content">
+        <b>Patient name: <%= patient.name %></b>
+        <p>Sex: <%= patient.sex %></p>
+        <p>Email: <%= patient.email %></p>
+      </div>
+      <div class="card-action">
         <p>
-          <%= patient.name %>
           <%= link_to 'create appointment', new_patient_appointment_path(patient.id) %>
+          <vr></vr>
           <%= link_to 'view appointments',  patient_path(patient.id) %>
         </p>
+      </div>
+    </div>
     <% end %>
-    <%= link_to 'Add new patient', new_patient_path %>
-    <%= link_to 'Back to home page', root_path %>
-  </div>
+    <div class="link-container waves-effect waves-light btn-large">
+      <%= link_to 'Add new patient', new_patient_path %>
+    </div>
+    <vr></vr>
+    <div class="home-container waves-effect waves-light btn-large">
+      <%= link_to 'Back to home page', root_path %>
+    </div>
 </div>
