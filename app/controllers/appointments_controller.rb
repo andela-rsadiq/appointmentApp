@@ -17,8 +17,8 @@ class AppointmentsController < ApplicationController
 
   def create
     if @appointment.save
-      redirect_to patient_path(@patient)
-
+      PatientMailer.notification_mail(@patient).deliver_now!
+      redirect_to @patient
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class AppointmentsController < ApplicationController
 
   def update
     if @appointment.update(appointment_params)
-      redirect_to patient_path(@patient)
+      redirect_to @patient
     else
       render 'edit'
     end
@@ -38,7 +38,7 @@ class AppointmentsController < ApplicationController
   def destroy
      if @appointment.destroy
        flash[:notice] = 'Appointment has been deleted!'
-       redirect_to patient_path(@patient)
+       redirect_to @patient
      end
   end
 

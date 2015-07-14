@@ -31,6 +31,7 @@ group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
+  gem "letter_opener"
 end
 
 group :development, :test do

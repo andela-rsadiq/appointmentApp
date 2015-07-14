@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Appointment Notification for <%= @patient.name %></h1>
+    <p>
+      This is to notify you that you have been scheduled for appointment in our hospital. The details of the appointment is written below:
+      <br>
+      Patient Name: <%= @patient.name %> <br>
+      Staff to See:
+      <br>
+      Appointment Details:
+    </p>
+    <p>
+      Call <a href="tel:+2347034578604">+234-703-457-8604</a> to confirm your appointment before the scheduled date.
+    </p>
+    <p>We hope to see you healthy always!</p>
+  </body>
+</html>
